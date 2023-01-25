@@ -12,33 +12,33 @@ export const Projects = () => {
 
     const projects = [
         {
-          title: "Business Startup",
-          description: "Design & Development",
+          title: "Design & Planning",
+          description: "Create the perfect layout for you page",
           imgUrl: projImg1,
         },
         {
-          title: "Business Startup",
-          description: "Design & Development",
+          title: "Static Websites",
+          description: "Simple one page websites",
           imgUrl: projImg2,
         },
         {
-          title: "Business Startup",
-          description: "Design & Development",
+          title: "Business level Websites",
+          description: "Complex websites with multiple pages",
           imgUrl: projImg3,
         },
         {
-          title: "Business Startup",
-          description: "Design & Development",
+          title: "Web aplications",
+          description: "Multi layered web apps & CMS with administration",
           imgUrl: projImg1,
         },
         {
-          title: "Business Startup",
-          description: "Design & Development",
+          title: "Wordpress and Wix",
+          description: "Websites using preset tools",
           imgUrl: projImg2,
         },
         {
-          title: "Business Startup",
-          description: "Design & Development",
+          title: "Code deployment and AWS",
+          description: "Various integration with leading technology",
           imgUrl: projImg3,
         },
       ];
@@ -58,13 +58,13 @@ export const Projects = () => {
                         <Tab.Container id="project-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                                <Nav.Link eventKey="first">Tab One</Nav.Link>
+                                <Nav.Link eventKey="first">Web Development</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Tab Two</Nav.Link>
+                                <Nav.Link eventKey="second">3D Modelling & animation</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">Tab Three</Nav.Link>
+                                <Nav.Link eventKey="third">IOT & LoraWAN</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
@@ -82,8 +82,8 @@ export const Projects = () => {
                                     }
                                 </Row>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">Lorem Ipsum</Tab.Pane>
-                            <Tab.Pane eventKey="third">Lorem Ipsum</Tab.Pane>
+                            <Tab.Pane eventKey="second">3D Modelling & animation</Tab.Pane>
+                            <Tab.Pane eventKey="third">IOT & LoraWAN</Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>

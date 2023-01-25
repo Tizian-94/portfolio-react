@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/header-img.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDelting] = useState(false);
-    const toRotate = ["Web Developer", "Web Designer", "UI/UX Designer" ];
+    const toRotate = ["Web Developer", "Software Engineer", "3D Artist" ];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const period = 2000;
@@ -52,7 +52,7 @@ export const Banner = () => {
                         {({ isVisible}) => 
                             <div className={isVisible ? "animate_animated animate__fadeIn" : ""}>
                             <span className="tagline">Welcome to my Portfolio</span>
-                            <h1>{'Hi! I`m Tizian Glavina! '}<span className="wrap">{text}</span></h1>
+                            <h1>{'Hi! I`m Tizian! '}<span className="wrap">{text}</span></h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                             <button onClick={() => console.log('connect')}>Let`s connect <ArrowRightCircle size={25} /></button>
                             </div>}
