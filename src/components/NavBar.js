@@ -9,6 +9,12 @@ export const NavBar = () => {
     const {activeLink, setActiveLink} = useState('home');
     const {scrolled, seScrolled} = useState(false);
 
+
+    function LinkFreelance()
+        {
+            window.location = "https://www.freelancer.com/u/Dudovsvilac";
+        }
+
     useEffect(() => {
         const onScroll = () => {
             if (window.scrollY > 50) {
@@ -44,11 +50,11 @@ export const NavBar = () => {
               </Nav>
               <span className="navbar-text">
                 <div className="social-icon">
-                    <a href="https://www.linkedin.com/in/tizian-glavina-a01790223/"><img src={navIcon1} alt="" /></a>
-                    <a href="https://www.facebook.com/tizian.glavina/"><img src={navIcon2} alt="" /></a>
-                    <a href="https://www.instagram.com/atashiowarasete/"><img src={navIcon3} alt="" /></a>
+                    <a href="https://www.linkedin.com/in/tizian-glavina-%E3%83%86%E3%83%84%E3%83%A4%E3%83%B3%E3%83%BB%E3%82%B0%E3%83%A9%E3%83%B4%E3%82%A3%E3%83%8A-a01790223/"><img src={navIcon1} alt="" /></a>
+                    <a href="https://www.fiverr.com/users/tglav87/"><img src={navIcon2} alt="" /></a>
+                    <a href="https://www.upwork.com/freelancers/~01f04fac70d6cd4638"><img src={navIcon3} alt="" /></a>
                 </div>
-                <button className="vvd" onClick={() => console.log ('connect')}><span>Let`s Connect</span></button>
+                <button className="vvd" onClick={() => LinkFreelance()}><span>Connect with me on Freelancer</span></button>
               </span>
             </Navbar.Collapse>
           </Container>

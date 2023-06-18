@@ -4,6 +4,18 @@ import colorSharp2 from "../assets/img/color-sharp2.png";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
+import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/project-img7.png";
+import projImg8 from "../assets/img/project-img8.png";
+import projImg9 from "../assets/img/project-img9.png";
+import projImg10 from "../assets/img/project-img10.png";
+import projImg11 from "../assets/img/project-img11.png";
+import projImg12 from "../assets/img/project-img12.png";
+import projImg13 from "../assets/img/project-img13.png";
+import projImg14 from "../assets/img/project-img14.png";
+import projImg15 from "../assets/img/project-img15.png";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
 
@@ -13,12 +25,12 @@ export const Projects = () => {
     const projects = [
         {
           title: "Design & Planning",
-          description: "Create the perfect layout for you page",
+          description: "Figma & Figjam conceptualisation & design",
           imgUrl: projImg1,
         },
         {
           title: "Static Websites",
-          description: "Simple one page websites",
+          description: "Wordpress, Elementor & simple html websites",
           imgUrl: projImg2,
         },
         {
@@ -29,17 +41,66 @@ export const Projects = () => {
         {
           title: "Web aplications",
           description: "Multi layered web apps & CMS with administration",
-          imgUrl: projImg1,
+          imgUrl: projImg4,
         },
         {
-          title: "Wordpress and Wix",
-          description: "Websites using preset tools",
-          imgUrl: projImg2,
+          title: "AWS management",
+          description: "CloudTrail & S3",
+          imgUrl: projImg5,
         },
         {
-          title: "Code deployment and AWS",
-          description: "Various integration with leading technology",
-          imgUrl: projImg3,
+          title: "Code deployment and maintenance",
+          description: "Heroku, Railway, PythonAnywhere & more!",
+          imgUrl: projImg6,
+        },
+      ];
+    const projects3d = [
+        {
+          title: "Mesh Creation",
+          description: "Static Mesh creation Unwrap & Texturing",
+          imgUrl: projImg7,
+        },
+        {
+          title: "Character Creation",
+          description: "Character creation, texturing, bone rigging & weight painting",
+          imgUrl: projImg8,
+        },
+        {
+          title: "Character/Mesh Animation",
+          description: "Walk cycles, dynamic & idle animations",
+          imgUrl: projImg9,
+        },
+        {
+          title: "Imports & Exports",
+          description: "Converting files and objects to and from Maya, Blender, Unity & Unreal Engine",
+          imgUrl: projImg10,
+        },
+        {
+          title: "World Building & Level design",
+          description: "3d or 2d obstacles, events and cutscenes",
+          imgUrl: projImg11,
+        },
+        {
+          title: "Sound design",
+          description: "Ambiental music & basic level soundtracks",
+          imgUrl: projImg12,
+        },
+      ];
+      const projectsiot = [
+        {
+          title: "Custom Linux Server setup",
+          description: "Website or file hosting on private server",
+          imgUrl: projImg13,
+        },
+        {
+          title: "LoRa Reciever parser server",
+          description: "Parse geodata and text from LoRa module",
+          imgUrl: projImg14,
+        },
+        {
+          title: "Arduino & Python 2",
+          description: "Led,4-12 dof arms & hexapods, drones, etc.",
+          imgUrl: projImg15,
         },
       ];
 
@@ -52,7 +113,7 @@ export const Projects = () => {
                         {({ isVisible}) => 
                             <div className={isVisible ? "animate_animated animate__slideInUp" : ""}>
                         <h2>Projects</h2>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                        <p>Here you can check out some previews of the projects i have worked on/am currently working on to get a better idea of what my crafts are all about. If you have any questions feel free to ask</p>
                         </div>}
                     </TrackVisibility>
                         <Tab.Container id="project-tabs" defaultActiveKey="first">
@@ -82,8 +143,32 @@ export const Projects = () => {
                                     }
                                 </Row>
                             </Tab.Pane>
-                            <Tab.Pane eventKey="second">3D Modelling & animation</Tab.Pane>
-                            <Tab.Pane eventKey="third">IOT & LoraWAN</Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                                <Row>
+                                {
+                                        projects3d.map((project, index) => {
+                                            return (
+                                                <ProjectCard 
+                                                key={index}
+                                                {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                </Row></Tab.Pane>
+                            
+                            <Tab.Pane eventKey="third"><Row>
+                                {
+                                        projectsiot.map((project, index) => {
+                                            return (
+                                                <ProjectCard 
+                                                key={index}
+                                                {...project}
+                                                />
+                                            )
+                                        })
+                                    }
+                                    </Row></Tab.Pane>
                         </Tab.Content>
                         </Tab.Container>
                     </Col>
