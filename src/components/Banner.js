@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/header-img.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -60,7 +60,7 @@ export const Banner = () => {
                             <div className={isVisible ? "animate_animated animate__fadeIn" : ""}>
                             <span className="tagline">Welcome</span>
                             <h1>{'I`m Tizian '}<br></br><span className="wrap">- {text}</span></h1>
-                            <p>I have been a software engineer since 2019, making various freelance projects and since 2021 i started my professional career in programming in an international startup company based in Croatia. My primary skills lie in quick designing and creation of websites, but i am also interested in creating larger scale webapps in combination with python, django & wagtail CMS.
+                            <p id="introtext">I have been a software engineer since 2019, making various freelance projects and since 2021 i started my professional career in programming in an international startup company based in Croatia. My primary skills lie in quick designing and creation of websites, but i am also interested in creating larger scale webapps in combination with python, django & wagtail CMS.
                             </p>
                             <button onClick={() => sendEmail()}>Contact me by email<ArrowRightCircle size={25} /> </button>
                             </div>}

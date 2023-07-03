@@ -1,10 +1,24 @@
+import React from "react";
+import { render } from "react-dom";
+
+
+
 import { Container, Col, Row } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import colorSharp from "../assets/img/color-sharp.png";
+import {
+    CircularProgressbar,
+    buildStyles
+  } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import { easeQuadInOut } from "d3-ease";
+
+import AnimatedProgressProvider from "./AnimatedProgressProvider";
+import ChangingProgressProvider from "./ChangingProgressProvider";
+import RadialSeparators from "./RadialSeparators";
+
+
 
 export const Skills = () => {
     const responsive = {
@@ -26,7 +40,8 @@ export const Skills = () => {
             items: 1
         }
     };
-
+    const percentage = 66;
+    
     return (
         <section className="skill" id="skills">
         <Container>
@@ -39,20 +54,54 @@ export const Skills = () => {
                         <p>Being a fullstack web developer requires knowledge in various fields and departments, every project that i have taken these past few years has helped me further improve my knowledge on these subjects.</p>
                         <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <div id="speedometer_container">
+                            <ChangingProgressProvider values={[80, 80, 0, 80, 80]}>
+                                {percentage => (
+                            <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({
+                                pathTransitionDuration: 1
+                            })}/>
+                        )}
+                            </ChangingProgressProvider>
+                            </div>
                                 <h5>Django & Python</h5>
+                                <div class="first "></div>
+                                
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                            <div id="speedometer_container">
+                            <ChangingProgressProvider values={[75, 75, 0, 75, 75]}>
+                                {percentage => (
+                            <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({
+                                pathTransitionDuration: 1
+                            })}/>
+                        )}
+                            </ChangingProgressProvider>
+                            </div>
                                 <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Postgres</h5>
+                            <div id="speedometer_container">
+                            <ChangingProgressProvider values={[65, 65, 0, 65, 65]}>
+                                {percentage => (
+                            <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({
+                                pathTransitionDuration: 1
+                            })}/>
+                        )}
+                            </ChangingProgressProvider>
+                            </div>
+                                <h5>AWS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>AWS</h5>
+                            <div id="speedometer_container">
+                            <ChangingProgressProvider values={[95, 95, 0, 95, 95]}>
+                                {percentage => (
+                            <CircularProgressbar value={percentage} text={`${percentage}%`} styles={buildStyles({
+                                pathTransitionDuration: 1
+                            })}/>
+                        )}
+                            </ChangingProgressProvider>
+                            </div>
+                                <h5>Wordpress & Elementor</h5>
                             </div>
                         </Carousel>
                     </div>
