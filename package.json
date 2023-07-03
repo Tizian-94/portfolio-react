@@ -1,6 +1,7 @@
 {
   "name": "personal-portfolio",
   "version": "0.1.0",
+  "homepage": "https://tizian-94.github.io/portfolio-react/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -11,7 +12,6 @@
     "cors": "^2.8.5",
     "d3-ease": "^1.0.5",
     "express": "^4.18.2",
-    "gh-pages": "^5.0.0",
     "jquery-circle-progress": "^1.2.2",
     "js-circle-progress": "^0.2.4",
     "lodash": "^4.17.11",
@@ -29,6 +29,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -51,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
